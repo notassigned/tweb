@@ -1,0 +1,13 @@
+<cols>
+  <rows size="16" border="true">
+    <cols size="1">
+      <text size="11" color="yellow" text="Connected:"/>
+      <text id="count" color="lightblue" text="-"/>
+    </cols>
+    <list id="peers" title="Peers" titlecolor="yellow" titlealign="left"/>
+  </rows>
+  <rows border="true" bordercolor="blue">
+    <text id="chat" dynamiccolors="true"/>
+    <input id="input" label=">" labelcolor="green" focus="true" size="1"/>
+  </rows>
+</cols>

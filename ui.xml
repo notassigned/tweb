@@ -1,0 +1,11 @@
+<rows>
+    <libp2p
+    id="QmPs7ahYW2VWhAucjM5Y2sWLPidt47A9JdRcFdY2rqkB5R"
+    addr="/ip4/127.0.0.1/udp/7000/quic"
+    path="timeserver"
+    size="1"/>
+    <libp2p
+    id="QmPs7ahYW2VWhAucjM5Y2sWLPidt47A9JdRcFdY2rqkB5R"
+    addr="/ip4/127.0.0.1/udp/7000/quic"
+    path="lobby"/>
+</rows>
