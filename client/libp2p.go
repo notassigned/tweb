@@ -100,7 +100,7 @@ func (l *Libp2p) connect(path string, pid peer.ID) {
 		return
 	}
 
-	nstream := tnetwork.CreatNodeStream(stream)
+	nstream := tnetwork.NewNodeStream(stream)
 
 	//start routine to send events to remote
 	go l.sendEventsToRemote(nstream)

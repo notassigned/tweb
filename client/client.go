@@ -102,11 +102,11 @@ func (c *Client) CreateItem(
 	return update, node, p, f
 }
 
-func (ui *Client) parseXML(s string, ctx context.Context) error {
+func (c *Client) parseXML(s string, ctx context.Context) error {
 	var node xmlnode.XmlNode
 	d := xml.NewDecoder(strings.NewReader(s))
 
-	root := makeRoot(ui, true, nil)
+	root := makeRoot(c, true, nil)
 
 	err := d.Decode(&node)
 	if err != nil {
@@ -115,7 +115,7 @@ func (ui *Client) parseXML(s string, ctx context.Context) error {
 	node.MapAttributesRecur()
 	root.addElement(&node, nil, ctx)
 
-	ui.setRoot(root.flex)
+	c.setRoot(root.flex)
 	return nil
 }
 

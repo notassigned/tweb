@@ -6,7 +6,6 @@ import (
 	"strings"
 
 	"github.com/antchfx/xmlquery"
-	"github.com/libp2p/go-libp2p/core/network"
 )
 
 type XmlNode struct {
@@ -102,13 +101,6 @@ func CreateNodeFromXML(xmlStr string) (*XmlNode, error) {
 	return node, err
 }
 
-func CreateNodeFromStream(stream network.Stream) (n *XmlNode, err error) {
-	n = &XmlNode{}
-	err = xml.NewDecoder(stream).Decode(&n)
-	n.MapAttributesRecur()
-	return
-}
-
 func (n *XmlNode) AddChild(newNode *XmlNode) *XmlNode {
 	n.Nodes = append(n.Nodes, newNode)
 	return n
@@ -156,5 +148,4 @@ func (n *XmlNode) MapAttributesRecur() {
 	for _, n := range n.Nodes {
 		n.MapAttributesRecur()
 	}
-
 }

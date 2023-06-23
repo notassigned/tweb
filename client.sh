@@ -2,5 +2,5 @@ cd ~/sandbox/tweb
 if [ ! -f ./id ]; then
   go run . genkey > id2
 fi
-go run . ui.xml
+go run . ./examples/ui.xml
 cd -

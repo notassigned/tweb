@@ -14,7 +14,7 @@ type NodeStream struct {
 	MessageStream func() MessageStream
 }
 
-func CreatNodeStream(s io.ReadWriteCloser) NodeStream {
+func NewNodeStream(s io.ReadWriteCloser) NodeStream {
 	msgStream := NewMessageStream(s)
 	return NodeStream{
 		Read: func() (*xmlnode.XmlNode, error) {

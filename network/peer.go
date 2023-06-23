@@ -13,6 +13,6 @@ type Peer struct {
 func NewPeer(s network.Stream) *Peer {
 	return &Peer{
 		ID:     s.Conn().RemotePeer(),
-		Stream: CreatNodeStream(s),
+		Stream: NewNodeStream(s),
 	}
 }
