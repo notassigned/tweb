@@ -1,6 +1,6 @@
 # tweb
 
-tweb is a client server framework for building GUI applications for the terminal.
+A client server framework for building terminal GUI applications.
 
 ### Usage
 Start example server
