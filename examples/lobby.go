@@ -8,6 +8,8 @@ import (
 	x "github.com/notassigned/tweb/xmlnode"
 )
 
+const LOBBY_FILE = "./lobby.xml"
+
 var view []byte
 
 type nameCheck struct {
@@ -140,7 +142,7 @@ func getName(l *Lobby, ms tnetwork.NodeStream) (name string, e error) {
 
 func getLobbyView() {
 	getLobby := func() {
-		node, err := x.CreateNodeFromFile("./examples/lobby.xml")
+		node, err := x.CreateNodeFromFile(LOBBY_FILE)
 		if err != nil {
 			fmt.Println("Error reading lobby view file:\n", err)
 			return
